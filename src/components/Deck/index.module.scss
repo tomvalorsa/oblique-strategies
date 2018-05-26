@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+.deck {
+  border: 1px solid yellow;
+  position: relative;
+  height: 40vh;
+}
+
+.card {
+  height: 200px;
+  width: 320px;
+  background-color: $white;
+  color: $black;
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -160px;
+  transform: perspective(600px) rotateX(70deg);
+}
+
+.selected {
+  border: 2px solid red;
+}

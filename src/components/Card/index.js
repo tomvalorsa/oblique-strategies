@@ -8,7 +8,8 @@ type Props = {
 
 class Card extends React.Component<Props> {
   render() {
-    return <div className={styles.card}>{this.props.children}</div>;
+    const { children } = this.props;
+    return <div className={styles.card}>{children}</div>;
   }
 }
 

@@ -1,3 +1,12 @@
+@import "../../variables.scss";
+
 .card {
-  border: 1px solid red;
+  height: 200px;
+  width: 320px;
+  background-color: $white;
+  color: $black;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
