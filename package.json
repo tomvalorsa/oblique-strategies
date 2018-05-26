@@ -11,6 +11,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "pretty-quick --staged",
+    "flow": "flow check"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.73.0",
+    "husky": "^0.14.3",
+    "jest-cli": "^23.0.0",
+    "prettier": "1.12.1",
+    "pretty-quick": "^1.6.0"
   }
 }
