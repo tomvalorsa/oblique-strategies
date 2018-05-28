@@ -2,9 +2,12 @@
   "name": "oblique-strategies",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "classnames": "^2.2.5",
     "custom-react-scripts": "^0.2.2",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "lodash.shuffle": "^4.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
@@ -15,7 +18,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged",
-    "flow": "flow check"
+    "flow": "flow check",
+    "deploy": "yarn build && gulp deploy"
   },
   "devDependencies": {
     "flow-bin": "^0.73.0",
