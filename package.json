@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "custom-react-scripts": "^0.2.2",
+    "lodash.shuffle": "^4.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },

@@ -2,7 +2,7 @@
 
 .deck {
   position: relative;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   perspective: 1000;
 }
@@ -16,8 +16,6 @@
   left: 50%;
   margin-left: -160px;
   transform: rotateX(70deg);
-  // http://lea.verou.me/css3patterns/#weave
-  // by Jeroen Franse
   background: linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
 linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
   background-color:#708090;
@@ -43,6 +41,9 @@ linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24
   align-items: center;
   justify-content: center;
   transform: rotateX(180deg);
+  padding: 2rem;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .selected {
@@ -50,14 +51,13 @@ linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24
   animation-fill-mode: forwards;
 }
 
-// BUG: animation is jerky
 @keyframes flip {
   0% {
     transform: rotateX(70deg);
   }
 
   50% {
-    transform: rotateX(100deg) translate3d(0, 150px, 0);
+    transform: rotateX(85deg) translate3d(0, 150px, -50px);
   }
 
   100% {
