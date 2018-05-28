@@ -13,8 +13,6 @@ class Deck extends React.Component<Props> {
   render() {
     const { cards, selected } = this.props;
 
-    console.log(cards, selected);
-
     return (
       <div className={styles.deck}>
         {cards.map((card, i) => (

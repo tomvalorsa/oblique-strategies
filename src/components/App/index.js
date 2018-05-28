@@ -6,15 +6,6 @@ import { Strategies } from '../../const';
 import { Strategy } from '../../types';
 import shuffle from 'lodash.shuffle';
 
-/*
-  TODO:
-  - css border bug for card
-  - clean everything up
-  - write readme with license (unlicense?)
-  - favicon
-  - cross browser compat
-*/
-
 type State = {
   cards: Strategy[],
   selected?: Strategy

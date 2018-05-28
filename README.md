@@ -1,16 +1,12 @@
 # Oblique Strategies
 
-TODO
+Deck of cards to draw from when you've hit a creative brick wall. Based on the [original set](https://en.wikipedia.org/wiki/Oblique_Strategies) by Brian Eno and Peter Schmidt. This set leans more towards programming.
 
+The pattern on the back of the cards was taken from [css3 patterns](http://lea.verou.me/css3patterns/#weave) and was made by Jeroen Franse.
 
-card data:
+Sources:
 
-https://traviscj.com/blog/oblique_programming_strategies.html
-https://github.com/RobBlackwell/oblique-strategies-for-programmers
-Original oblique strategies
-me
-
-pretty card back:
-// http://lea.verou.me/css3patterns/#weave
-  // by Jeroen Franse
-- it's a gradient!
+- the original Oblique Stragies set
+- [Oblique Strategies for Programmers](https://github.com/RobBlackwell/oblique-strategies-for-programmers)
+- [Oblique Programming Strategies](https://traviscj.com/blog/oblique_programming_strategies.html)
+- me
