@@ -67,7 +67,7 @@ class App extends React.Component<{}, State> {
         <Deck cards={cards} selected={selected} />
 
         <button className={styles.drawCard} onClick={this.drawCard}>
-          Draw a card
+          DRAW A CARD
         </button>
       </div>
     );

@@ -4,8 +4,24 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  // background-color: $black;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .drawCard {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  border: 2px solid $white;
+  color: $white;
+  background-color: $black;
+  cursor: pointer;
+  transition: color 0.4s, background-color 0.4s;
+  
+  &:hover {
+    color: $black;
+    background-color: $white;
+  }
 }

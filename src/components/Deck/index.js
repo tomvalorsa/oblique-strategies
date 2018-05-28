@@ -25,7 +25,11 @@ class Deck extends React.Component<Props> {
               bottom: i * 2,
               zIndex: i + 1
             }}
-          />
+          >
+            <div className={styles.back}>
+              <div className={styles.front}>{card.text}</div>
+            </div>
+          </div>
         ))}
         {selected && (
           <div
@@ -35,7 +39,11 @@ class Deck extends React.Component<Props> {
               bottom: cards.length * 2,
               zIndex: cards.length
             }}
-          />
+          >
+            <div className={styles.back}>
+              <div className={styles.front}>{selected.text}</div>
+            </div>
+          </div>
         )}
       </div>
     );

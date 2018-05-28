@@ -1,26 +1,73 @@
 @import "../../variables.scss";
 
 .deck {
-  border: 1px solid yellow;
   position: relative;
   height: 40vh;
+  width: 100%;
+  perspective: 1000;
 }
 
 .card {
   height: 200px;
   width: 320px;
-  background-color: $white;
   color: $black;
-  border: 2px solid blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0px 3px 10px 0px $black;
   position: absolute;
   left: 50%;
   margin-left: -160px;
-  transform: perspective(600px) rotateX(70deg);
+  perspective: 1000;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateX(180deg);
+}
+
+.back {
+  height: 100%;
+  width: 100%;
+  // http://lea.verou.me/css3patterns/#weave
+  // by Jeroen Franse
+  background: linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
+  transform: rotateX(0deg);
+  position: relative;
 }
 
 .selected {
-  border: 2px solid red;
+  .back {
+    animation: flip 1s;
+    animation-fill-mode: forwards;
+    // transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(100deg) translate3d(0, 150px, 0);
+  }
+
+  100% {
+    transform: rotateX(180deg) translate3d(0, 100px, 0) /* translateZ(-150px) */;
+  }
 }
