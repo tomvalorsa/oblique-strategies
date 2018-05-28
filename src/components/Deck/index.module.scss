@@ -15,13 +15,21 @@
   position: absolute;
   left: 50%;
   margin-left: -160px;
-  perspective: 1000;
+  transform: rotateX(70deg);
+  // http://lea.verou.me/css3patterns/#weave
+  // by Jeroen Franse
+  background: linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color:#708090;
+  background-size: 64px 128px;
 }
 
 .front,
-.back {
+.card {
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 10px solid $white; /* BUG: child (.front) renders within the border, so we lose 10px */  
 }
 
 .front {
@@ -29,38 +37,23 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotateX(180deg);
 }
 
-.back {
-  height: 100%;
-  width: 100%;
-  // http://lea.verou.me/css3patterns/#weave
-  // by Jeroen Franse
-  background: linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-background-color:#708090;
-background-size: 64px 128px;
-  transform: rotateX(0deg);
-  position: relative;
-}
-
 .selected {
-  .back {
-    animation: flip 1s;
-    animation-fill-mode: forwards;
-    // transform: rotateX(-180deg);
-  }
+  animation: flip 1s;
+  animation-fill-mode: forwards;
 }
 
+// BUG: animation is jerky
 @keyframes flip {
   0% {
-    transform: rotateX(0deg);
+    transform: rotateX(70deg);
   }
 
   50% {
@@ -68,6 +61,6 @@ background-size: 64px 128px;
   }
 
   100% {
-    transform: rotateX(180deg) translate3d(0, 100px, 0) /* translateZ(-150px) */;
+    transform: rotateX(180deg) translate3d(0, 100px, -150px);
   }
 }
